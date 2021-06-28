@@ -3,8 +3,10 @@
     <head>
         <meta charset="utf-8" />
         <title>Welcome, Django</title>
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'welcome/site.css' %}" />
     </head>
     <body>
-        <strong>Welcome there, {{ name }}!</strong> It's {{ date | date:"l, d F, Y" }} at {{ date | time:"H:i:s" }}
+       <div align="center"><span class="message">Welcome there, {{ name }}!</span> It's {{ date | date:"l, d F, Y" }} at {{ date | time:"H:i:s" }}</div>
     </body>
 </html>
