@@ -4,7 +4,7 @@ from django.shortcuts import HttpResponse
 from django.shortcuts import render
 
 def home(request):
-    return HttpResponse("Welcome, Trooper!")
+    return render(request, "welcome/home.html")
 
 def welcome_there(request, name):
     return render(
@@ -15,3 +15,9 @@ def welcome_there(request, name):
             'date': datetime.now()
         }
     )
+
+def about(request):
+    return render(request, "welcome/about.html")
+
+def tracker(request):
+    return render(request, "welcome/tracker.html")
